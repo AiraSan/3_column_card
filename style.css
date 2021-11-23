@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%)
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Very-light-gray);
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-container{
+    width: 70%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+.box{
+    width: 30%;
+    padding: 40px;
+}
+.box-1{
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.box-2{
+    background-color: var(--Dark-cyan);
+}
+.box-3{
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.header{
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--Very-light-gray);
+    font-size: 40px;
+    margin: 20px 0;
+}
+.content{
+    font-size: 15px;
+    color: var(--Transparent-white);
+    line-height: 1.5;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.button{
+    margin-top: 50px;
+    padding: 10px 25px;
+    border: none;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: var(--Very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    border: 2px solid var(--Transparent-white);
+    transition: 0.2s;
+}
+.button-1{
+    color: var(--Bright-orange);
+}
+.button-2{
+    color: var(--Dark-cyan);
+}
+.button-3{
+    color: var(--Very-dark-cyan);
+}
+.button:hover{
+    border: 2px solid var(--Transparent-white);
+    background-color: transparent;
+    color: var(--Transparent-white);
+}
+@media screen and (max-width: 780px){
+    .box-container{
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 440px){
+    .container{
+        height: inherit;
+    }
+    .box-container{
+        margin: 50px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        width: 80%;
+    }
+    .box-1{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .box-3{
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+}
